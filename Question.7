@@ -1,0 +1,4 @@
+SELECT DISTINCT E.FullName
+FROM EmployeeDetails E
+INNER JOIN EmployeeDetails M
+ON E.EmpID = M.ManagerID;
