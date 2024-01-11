@@ -1,0 +1,4 @@
+SELECT * FROM EmployeeDetails E
+WHERE EXISTS
+(SELECT * FROM EmployeeSalary S 
+WHERE  E.EmpId = S.EmpId);
