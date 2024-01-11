@@ -1,0 +1,6 @@
+SELECT E.EmpId, E.Project, E.Salary
+FROM (
+    SELECT *, Row_Number() OVER(ORDER BY EmpId) AS RowNumber
+    FROM EmployeeSalary
+) E
+WHERE E.RowNumber % 2 = 1;
