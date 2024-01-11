@@ -1,0 +1,5 @@
+SELECT EmployeeSalary.*
+FROM EmployeeSalary
+LEFT JOIN
+ManagerSalary USING (EmpId)
+WHERE ManagerSalary.EmpId IS NULL;
